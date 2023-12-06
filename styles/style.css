@@ -1,0 +1,58 @@
+/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+
+.page {
+  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-family: "IBM Plex mono", serif;
+  background-image: url("../images/cover-image-dark.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-size: 18px;
+  line-height: 130%;
+}
+
+.header {
+  display: grid;
+  min-block-size: 100vh;
+}
+
+.header-title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  line-height: 82.5%;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  @media (width >= 768) {
+    font-size:clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
+
+.header-content {
+  color: #000028;
+  background-color: #FF0070;
+  font-weight: 700;
+}
+
+.header-rec {
+  position: absolute;
+  inset-inline-end: 38px;
+  inset-block-start: 10px;
+}
+
+.header-rec::before {
+  content: "REC";
+  color: #FF0070;
+}
+
+.header__theme-menu {
+
+  justify-self: end;
+  margin-block-start: 50px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
