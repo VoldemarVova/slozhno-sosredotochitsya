@@ -16,8 +16,22 @@
   --header-text-color: #353430;
   --text-color: #353430;
   --decorated-color: #353430;
+  --color-text-content: #353430;
 
   --page-cover-img: url("../images/cover-image-light.png");
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --none-display: none;
+    --background-color: #FFF1F7;
+    --color-title: #FFC2E6;
+    --accent-color: #FF8DCB;
+    --header-text-color: #353430;
+    --text-color: #353430;
+    --decorated-color: #353430;
+    --color-text-content: #353430;
 
+    --page-cover-img: url("../images/cover-image-light.png");
+  }
+}
