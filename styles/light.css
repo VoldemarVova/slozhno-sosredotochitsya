@@ -3,15 +3,21 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-:root {
-  --accent-color: #ff8dcb;
-}
 
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --none-display: none;
+  --background-color: #FFF1F7;
+  --color-title: #FFC2E6;
+  --accent-color: #FF8DCB;
+  --header-text-color: #353430;
+  --text-color: #353430;
+  --decorated-color: #353430;
+
+  --page-cover-img: url("../images/cover-image-light.png");
 }
 
 
