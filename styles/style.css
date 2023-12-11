@@ -17,6 +17,11 @@
   min-block-size: 100vh;
   padding: 10px;
 }
+@media (width >= 768px) {
+  .header {
+    padding: 20px;
+  }
+}
 
 .header-title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -25,14 +30,24 @@
   color: var(--color-title, #DB00FF);
   text-shadow: 4px 4px 0 var(--accent-color, #FF0070);
   margin-block-start: 65px;
-  @media (width >= 768) {
+}
+@media (width >= 768px) {
+  .header-title {
     font-size:clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-inline-start: -20px;
   }
 }
 
 .header-content {
   font-weight: 700;
   margin-block: 55px;
+  height: fit-content;
+}
+@media (width >= 768px) {
+  .header-content {
+    width: clamp(364px, 48vw, 491px);
+    justify-self: end;
+  }
 }
 
 .title-decor {
@@ -47,7 +62,12 @@
   gap: 10px;
   inset-inline-end: 20px;
   inset-block-start: 13px;
-
+}
+@media (width >= 768px) {
+  .header-rec {
+    inset-inline-end: 29px;
+    inset-block-start: 22px;
+  }
 }
 
 .header-rec::before {
@@ -83,18 +103,34 @@
   inset-inline-end: 10px;
   inset-block-start: 10px;
 }
+@media (width >= 768px) {
+  .decorated-zone::before {
+    inset-inline-end: 20px;
+    inset-block-start: 20px;
+  }
+}
 
 .decorated-zone::after {
-  border-inline-start: 1px solid #ff0070;
-  border-block-end: 1px solid #ff0070;
+  border-inline-start: 1px solid var(--decorated-color, #FF0070);
+  border-block-end: 1px solid var(--decorated-color, #FF0070);
   inset-inline-start: 10px;
   inset-block-end: 10px;
 }
-
+@media (width >= 768px) {
+  .decorated-zone::after {
+    inset-inline-start: 20px;
+    inset-block-end: 20px;
+  }
+}
 
 .header__theme-menu {
   justify-self: end;
   margin-block-start: 65px;
+}
+@media (width >= 768px) {
+  .header__theme-menu {
+  margin-block-start: 172px;
+  }
 }
 
 .header__theme-menu-list {
@@ -144,12 +180,17 @@
   font-weight: 700;
   font-size: inherit;
   line-height: inherit;
-  /*background-color: var(--accent-color);*/
 }
+
 
 .section {
   display: grid;
   gap: 20px;
+}
+@media (width >= 768px) {
+  .section {
+    grid-template-columns: clamp(236px, 30.7vw , 315px) 1fr;
+  }
 }
 
 .article {
