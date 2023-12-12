@@ -279,6 +279,11 @@
     gap: 20px;
   }
 }
+@media (width >= 1024px) {
+  .section-gallery {
+    margin-block-start: 0;
+  }
+}
 
 .gallery {
   display: grid;
