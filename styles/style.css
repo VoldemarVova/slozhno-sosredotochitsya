@@ -132,12 +132,24 @@
   margin-block-start: 172px;
   }
 }
+@media (width >= 1024px) {
+  .header__theme-menu {
+    margin-block-start: 0;
+    justify-self: center;
+    margin-block-end: 208px;
+  }
+}
 
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
   list-style-type: none;
   gap: 12px;
+}
+@media (width >= 1024px) {
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
 }
 
 .header__theme-menu-button {
@@ -200,15 +212,20 @@
   }
 }
 
+
 .article-list {
   display: grid;
   gap: 20px;
 }
 
-
 @media (width >= 768px) {
   .attention {
     grid-column-start: span 3;
+  }
+}
+@media (width >= 1024px) {
+  .attention {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
