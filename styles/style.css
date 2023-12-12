@@ -173,6 +173,7 @@
   display: grid;
   padding: 40px 10px;
   gap: 50px;
+  /*line-height: 130%;*/
 }
 
 .main-title {
@@ -193,9 +194,14 @@
   }
 }
 
+.article-list {
+  display: grid;
+  gap: 20px;
+}
+
 .article {
   display: grid;
-  gap: 10px;
+  gap:10px;
 }
 
 .article-title {
