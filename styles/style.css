@@ -3,7 +3,7 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   font-family: "IBM Plex mono", serif;
-  background-color: var(--background-color);
+  background-color: var(--background-color, #000028);
   background-image: var(--page-cover-img, url("../images/cover-image-dark.png"));
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -15,8 +15,11 @@
 
 .header {
   display: grid;
-  min-block-size: 100vh;
+  grid-template-rows: 1fr min-content 1fr;
+  block-size: 100vh;
+  min-height: 668px;
   padding: 10px;
+  align-items: center;
 }
 @media (width >= 768px) {
   .header {
@@ -30,7 +33,6 @@
   line-height: 82.5%;
   color: var(--color-title, #DB00FF);
   text-shadow: 4px 4px 0 var(--accent-color, #FF0070);
-  margin-block-start: 65px;
 }
 @media (width >= 768px) {
   .header-title {
@@ -46,8 +48,13 @@
 }
 @media (width >= 768px) {
   .header-content {
-    width: clamp(364px, 48vw, 491px);
+    width: 364px;
     justify-self: end;
+  }
+}
+@media (width >= 1024px) {
+  .header-content {
+    width: 491px;
   }
 }
 
@@ -72,8 +79,9 @@
 }
 
 .header-rec::before {
-  content: "REC";
+  content: "Rec";
   color: #FF0070;
+  text-transform: uppercase;
 }
 
 .header-rec::after {
@@ -126,18 +134,15 @@
 
 .header__theme-menu {
   justify-self: end;
-  margin-block-start: 65px;
 }
 @media (width >= 768px) {
   .header__theme-menu {
-  margin-block-start: 172px;
   }
 }
 @media (width >= 1024px) {
   .header__theme-menu {
-    margin-block-start: 0;
+    align-self: flex-start;
     justify-self: center;
-    margin-block-end: 148px;
   }
 }
 
@@ -145,11 +150,12 @@
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  gap: 12px;
+  gap: 10px;
 }
 @media (width >= 1024px) {
   .header__theme-menu-list {
     flex-direction: row;
+    gap: 8px;
   }
 }
 
@@ -160,7 +166,7 @@
   font-size: 18px;
   line-height: 100%;
   cursor: pointer;
-  padding: 2.5px 13px;
+  padding: 2px 13px 4px 13px;
   text-transform: lowercase;
 }
 
@@ -171,7 +177,7 @@
 }
 
 .header__theme-menu-button:hover {
-  border-color: var(--decorated-color, #FF0070);
+  border-color: var(--color-hover-button, #FF007066);
 }
 
 .header__theme-menu-button:focus {
@@ -244,7 +250,7 @@
   color: var(--color-text-content, #F1B2CE);
 }
 
-.article-h4-title {
+.article-regular-title {
   font-size: inherit;
   line-height: inherit;
   font-weight: 400;
@@ -255,7 +261,7 @@
 }
 
 .span-link:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid currentColor;
 }
 
 .span-link:focus {
@@ -273,7 +279,7 @@
 .section-gallery {
   display: grid;
   gap: 10px;
-  margin-block-start: 10px;
+  /*margin-block-start: 10px;*/
 }
 @media (width >= 768px) {
   .section-gallery {
@@ -298,12 +304,12 @@
 }
 
 @media (width >= 768px) {
-  .gallery-li:nth-child(1),
-  .gallery-li:nth-child(5) {
+  .gallery-list-item:nth-child(1),
+  .gallery-list-item:nth-child(5) {
     grid-column-start: span 2;
   }
-  .gallery-li:nth-child(2),
-  .gallery-li:nth-child(3) {
+  .gallery-list-item:nth-child(2),
+  .gallery-list-item:nth-child(3) {
     grid-row-start: span 2;
   }
 }
@@ -317,7 +323,8 @@
 
 .footer {
   display: grid;
-  min-block-size: 100vh;
+  block-size: 100vh;
+  min-height: 668px;
   padding: 10px;
   place-items: center;
 }

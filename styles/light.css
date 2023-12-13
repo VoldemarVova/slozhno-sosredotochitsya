@@ -17,6 +17,7 @@
   --text-color: #353430;
   --decorated-color: #353430;
   --color-text-content: #353430;
+  --color-hover-button: #32312D66;
 
   --page-cover-img: url("../images/cover-image-light.png");
 }
@@ -31,6 +32,7 @@
     --text-color: #353430;
     --decorated-color: #353430;
     --color-text-content: #353430;
+    --color-hover-button: #32312D66;
 
     --page-cover-img: url("../images/cover-image-light.png");
   }
