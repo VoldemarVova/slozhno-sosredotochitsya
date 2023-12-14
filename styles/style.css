@@ -21,6 +21,7 @@
   padding: 10px;
   align-items: center;
 }
+
 @media (width >= 768px) {
   .header {
     padding: 20px;
@@ -34,6 +35,7 @@
   color: var(--color-title, #DB00FF);
   text-shadow: 4px 4px 0 var(--accent-color, #FF0070);
 }
+
 @media (width >= 768px) {
   .header-title {
     font-size:clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -46,12 +48,14 @@
   margin-block: 55px;
   height: fit-content;
 }
+
 @media (width >= 768px) {
   .header-content {
     width: 364px;
     justify-self: end;
   }
 }
+
 @media (width >= 1024px) {
   .header-content {
     width: 491px;
@@ -71,6 +75,7 @@
   inset-inline-end: 20px;
   inset-block-start: 13px;
 }
+
 @media (width >= 768px) {
   .header-rec {
     inset-inline-end: 29px;
@@ -112,6 +117,7 @@
   inset-inline-end: 10px;
   inset-block-start: 10px;
 }
+
 @media (width >= 768px) {
   .decorated-zone::before {
     inset-inline-end: 20px;
@@ -125,6 +131,7 @@
   inset-inline-start: 10px;
   inset-block-end: 10px;
 }
+
 @media (width >= 768px) {
   .decorated-zone::after {
     inset-inline-start: 20px;
@@ -135,6 +142,7 @@
 .header__theme-menu {
   justify-self: end;
 }
+
 @media (width >= 1024px) {
   .header__theme-menu {
     align-self: flex-start;
@@ -148,6 +156,7 @@
   list-style-type: none;
   gap: 10px;
 }
+
 @media (width >= 1024px) {
   .header__theme-menu-list {
     flex-direction: row;
@@ -188,8 +197,8 @@
   display: grid;
   padding: 40px 10px;
   gap: 50px;
-  /*line-height: 130%;*/
 }
+
 @media (width >= 768px) {
   .main {
     padding: 60px 20px;
@@ -204,17 +213,16 @@
   line-height: inherit;
 }
 
-
 .section {
   display: grid;
   gap: 20px;
 }
+
 @media (width >= 768px) {
   .section {
     grid-template-columns: clamp(236px, 30.7vw , 315px) 1fr;
   }
 }
-
 
 .article-list {
   display: grid;
@@ -226,6 +234,7 @@
     grid-column-start: span 3;
   }
 }
+
 @media (width >= 1024px) {
   .attention {
     grid-template-columns: repeat(3, 1fr);
@@ -275,13 +284,14 @@
 .section-gallery {
   display: grid;
   gap: 10px;
-  /*margin-block-start: 10px;*/
 }
+
 @media (width >= 768px) {
   .section-gallery {
     gap: 20px;
   }
 }
+
 @media (width >= 1024px) {
   .section-gallery {
     margin-block-start: 0;
@@ -292,6 +302,7 @@
   display: grid;
   gap: 10px;
 }
+
 @media (width >= 768px) {
   .gallery {
     gap: 20px;
@@ -331,6 +342,7 @@
   line-height: 82.5%;
   color: var(--color-title, #DB00FF);
 }
+
 @media (width >= 768px) {
   .footer-title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
